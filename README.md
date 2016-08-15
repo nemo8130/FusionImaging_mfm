@@ -5,7 +5,7 @@ Installation
 ```
 git clone https://github.com/nemo8130/FusionImaging_mfm
 cd FusionImaging_mfm
-run in MATLAB command window as a function
+run the script FusionImaging_mfm.m in MATLAB command window as a function
 ```
 
 ```
@@ -20,7 +20,7 @@ run in MATLAB command window as a function
 % collected at different Lift-heights into Fusion Images. 
 % 
 % The function needs two and exactly two input arguments
-% Usage : FusionImaging_mfm (sampfold, datmm)
+% **Usage : FusionImaging_mfm (sampfold, datmm)**
 % where 
 % sampfold: Is the sample folder with full path containing raw MFM .tif images\n')
 % and 
