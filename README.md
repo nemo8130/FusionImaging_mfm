@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FusionImaging_mfm
 Requires: `MATLAB (version R2016a or higher)`  
 
@@ -76,4 +75,3 @@ run in MATLAB command window as a function
 %
 %
 ```
->>>>>>> f5dc71555a8c7c7783d2528f2f7bf27da8c4c374
