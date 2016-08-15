@@ -1,3 +1,5 @@
+
+git pull  https://github.com/nemo8130/FusionImaging_mfm #--force
 git add *
 git commit -a -m "README.md added"
 git push  https://github.com/nemo8130/FusionImaging_mfm #--force
