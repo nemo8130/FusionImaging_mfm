@@ -77,7 +77,7 @@ elseif (isunix == 0 & ispc == 1)       % Windows
     g1=strfind(sampfold,'\');
 end
 
-lg1=length(g1);
+lg1=length(g1)
 
 % Identify whether the string ends with an oblic ('/': Linux; '\': Windows)
 % And act accordingly
@@ -88,14 +88,17 @@ if (length(sampfold) == g1(lg1))
 elseif (length(sampfold) > g1(lg1))
     dinp=sampfold(g1(lg1)+1:length(sampfold));    
     if (isunix == 1 & ispc == 0)                    % Linux 
-        pth=strcat(sampfold,'/');
+        sampfold=strcat(sampfold,'/');
     elseif (isunix == 0 & ispc == 1)                % Windows
-        pth=strcat(sampfold,'\');
+        sampfold=strcat(sampfold,'\');
     end        
     %fprintf('I am in elseif\n')
 end
 
-[a,b]=imxtract(pth,'tif');
+dinp
+sampfold
+
+[a,b]=imxtract(sampfold,'tif');
 A{k}=a;B{k}=b;
 h=liftheights(a);
 H{k}=h';
@@ -271,10 +274,8 @@ else
     yy=P(1)*xx.^3+P(2)*xx.^2+P(3)*xx+P(4);
 end
 xxx=1./xx;
-[pp,ss]=polyfit(xxx,yy,2);
+[pp,ss]=polyfit(xxx,yy,2);       % Try out '4'
 end
-
-
 
 
 function [pp,x,ybig]=bigPplot(NW,H,k,l,dinp);
@@ -390,7 +391,7 @@ end
 
 
 function h=liftheights(b)
-% pth is the directory
+% sampfold is the directory
 % b contains all the file names
 l=length(b);
 h=[];
