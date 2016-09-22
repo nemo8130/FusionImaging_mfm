@@ -61,7 +61,8 @@
 % datmm='Min_Max_Table_example_phase_data.format';  (File kept in the Current Directory)
 %
 % datmm='C:\user\Sankar\Data\SOFTWARE\Min_Max_Table_example_phase_data.format'; (File with full path: Windows)
-%
+% User have to reset appropriately the image range to be cropped to eliminate the colorbar etc. 
+% search in the code for 'Cropping'
 %
 
 function [cenz,dispz,lenlogz]=FusionImaging_mfm(sampfold,datmm)
@@ -107,6 +108,7 @@ H{k}=h';
 
 %fprintf('%10d  %15s\n',i,dinp);
 [newimA,newimB,newim,txt,h1,X,N,phi]=mfmanal_readfile_sankar(b,a,blk,dinp,datmm);
+whos newim;
 NW{k}=newim;
 
 ppp=[];
@@ -224,11 +226,11 @@ title (['log(z) 2D:  ',num2str(strrep(dinp,'_','-'))])
 set(gca,'fontsize',15)
 colorbar
 
-figure
+%figure
 [c1 n1] = hist(logz,100);
 fc1=c1./sum(sum(c1));
-bar(n1,fc1)
-title (['Normalized Frequency Distribution: ',num2str(strrep(dinp,'_','-'))])
+%bar(n1,fc1)
+%title (['Normalized Frequency Distribution: ',num2str(strrep(dinp,'_','-'))])
 
 cenz=mean(mean(logz));
 dispz=std(std(logz));
@@ -370,7 +372,7 @@ for i=1:l
         z=rgb2gray(z);
     end
     [r,c]=size(z);
-    newimA{i}=z(30:429,30:429);
+    newimA{i}=z(30:429,30:429);      % Cropping done here (user have to reset appropriately)
     G=z(1:r,r-10:c);
     newimB{i}=G;
     [n,x]=imhist(newimA{i});
