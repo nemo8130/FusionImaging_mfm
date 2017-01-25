@@ -1,8 +1,7 @@
 # FusionImaging_mfm
 Requires: `MATLAB (version R2016a or higher)`  
 
-# Indian Copyright 
-# Diary Number. 9692/2016-CO/SW
+## (c) Indian Copyright (Diary Number. 9692/2016-CO/SW)
 
 Installation
 ```
