@@ -2,7 +2,8 @@
 Requires: `MATLAB (version R2016a or higher)`  
 
 ### (c) Indian Copyright (Diary Number. 9692/2016-CO/SW)
-### Funding: The work was supported by the Department of Science and Technology – Science and Engineering Research Board (DST-SERB research grant PDF/2015/001079) and TEQIP, (RnD section) Centre of Excellence for Systems Biology and Nano Technology, University of Calcutta
+
+## Funding: The work was supported by the Department of Science and Technology – Science and Engineering Research Board (DST-SERB research grant PDF/2015/001079) and TEQIP, (R&D section) Centre of Excellence for Systems Biology and Nano Technology, University of Calcutta
 
 
 Installation
